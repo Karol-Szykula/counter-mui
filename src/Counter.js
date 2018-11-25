@@ -1,16 +1,14 @@
 import React from 'react'
 
 class Counter extends React.Component {
-    // constructor(props) {
-    //     super(props)
-    // }
 
     state = (
         JSON.parse(localStorage.getItem('state'))
         ||
         {
             counterValue: this.props.value || 0
-        })
+        }
+    )
 
     incCounter = () => {
         this.setState({
@@ -34,6 +32,7 @@ class Counter extends React.Component {
         this.setState({
             counterValue: this.state.counterValue - 5
         })
+        console.log(this.state.counterValue)
     }
 
     resetCounter = () => {
@@ -46,8 +45,8 @@ class Counter extends React.Component {
         localStorage.setItem('state', JSON.stringify(this.state))
     }
 
-    loadDataFromLocalStorage = () => {
-        this.setState(JSON.parse(localStorage.getItem('state')))
+    componentDidUpdate() {
+        this.saveDataInLocalStorage()
     }
 
     render() {
