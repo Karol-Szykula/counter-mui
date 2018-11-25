@@ -1,4 +1,16 @@
 import React from 'react'
+import RaisedButton from 'material-ui/RaisedButton'
+import Paper from 'material-ui/Paper'
+
+const style = {
+    button: {
+        margin: 12
+    },
+    paper: {
+        margin: 20,
+        textAlign: 'center'
+    }
+}
 
 class Counter extends React.Component {
 
@@ -52,40 +64,45 @@ class Counter extends React.Component {
     render() {
 
         return (
-            <div>
+            <Paper
+                style={style.paper}
+            >
                 <div>
                     <h1>{this.state.counterValue}</h1>
                 </div>
                 <div>
-                    <button
+                    <RaisedButton
+                        label="+"
+                        style={style.button}
                         onClick={this.incCounter}
-                    >
-                        +
-                    </button>
-                    <button
+                    />
+
+                    <RaisedButton
+                        label="-"
+                        style={style.button}
                         onClick={this.decCounter}
-                    >
-                        -
-                    </button>
+                    />
                 </div>
                 <div>
-                    <button
+                    <RaisedButton
+                        label="+5"
+                        style={style.button}
                         onClick={this.add5ToCounter}
-                    >
-                        +5
-                    </button>
-                    <button
+                    />
+
+                    <RaisedButton
+                        label="-5"
+                        style={style.button}
                         onClick={this.substract5FromCounter}
-                    >
-                        -5
-                    </button>
-                    <button
+                    />
+
+                    <RaisedButton
+                        label="RESET"
+                        style={style.button}
                         onClick={this.resetCounter}
-                    >
-                        Reset
-                    </button>
+                    />
                 </div>
-            </div>
+            </Paper >
         )
     }
 }

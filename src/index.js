@@ -8,6 +8,8 @@ import App from './App'
 
 
 ReactDOM.render(
-    <App />,
+    <MuiThemeProvider>
+        <App />
+    </MuiThemeProvider>,
     document.getElementById('root')
 )
