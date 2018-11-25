@@ -1,5 +1,5 @@
 Counter application with material ui components. It saves and loads value in local storage.
-[Demo](https://counter.karol-szykula.surge.sh)
+[Demo](http://counter.karol-szykula.surge.sh)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
