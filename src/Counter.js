@@ -5,12 +5,48 @@ class Counter extends React.Component {
     //     super(props)
     // }
 
+    state = {
+        counterValue: this.props.value || 0
+    }
+
+
 
     render() {
 
         return (
             <div>
-                Counter
+                <div>
+                    <h1>{this.state.counterValue}</h1>
+                </div>
+                <div>
+                    <button
+
+                    >
+                        +
+                    </button>
+                    <button
+
+                    >
+                        -
+                    </button>
+                </div>
+                <div>
+                    <button
+
+                    >
+                        -
+                    </button>
+                    <button
+
+                    >
+                        -
+                    </button>
+                    <button
+
+                    >
+                        -
+                    </button>
+                </div>
             </div>
         )
     }
