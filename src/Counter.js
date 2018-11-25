@@ -9,6 +9,11 @@ class Counter extends React.Component {
         counterValue: this.props.value || 0
     }
 
+    incCounter = () => {
+        this.setState({
+            counterValue: this.state.counterValue + 1
+        })
+    }
 
 
     render() {
@@ -20,7 +25,7 @@ class Counter extends React.Component {
                 </div>
                 <div>
                     <button
-
+                        onClick={this.incCounter}
                     >
                         +
                     </button>
@@ -34,17 +39,17 @@ class Counter extends React.Component {
                     <button
 
                     >
-                        -
+                        +5
                     </button>
                     <button
 
                     >
-                        -
+                        -5
                     </button>
                     <button
 
                     >
-                        -
+                        Reset
                     </button>
                 </div>
             </div>
